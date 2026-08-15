@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build Your Bowl — CSS Art, Comfort Food Edition</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/bowl.css">
+<link rel="stylesheet" href="css/controls.css">
+</head>
+<body>
+
+  <div class="intro">
+    <span class="eyebrow">CSS Art — Comfort Food</span>
+    <h1 class="headline">Build your bowl</h1>
+    <p class="sub">Arroz caldo, assembled your way. Every topping below is one click — everything you see happening is pure CSS: transitions, transforms, box-shadow particles. JavaScript only flips a switch.</p>
+  </div>
+
+  <div class="frame">
+    <div class="art">
+      <div class="composition" id="composition">
+
+        <div class="pin glow"></div>
+        <div class="pin counter-flakes"></div>
+        <div class="pin table-shadow"></div>
+
+        <div class="pin bowl"></div>
+        <div class="pin celebrate-ring"></div>
+        <div class="pin broth">
+          <div class="garnish-layer" id="garnishLayer">
+            <div class="rice-grains"></div>
+            <div class="pepper-flecks"></div>
+            <div class="shred shred1"></div>
+            <div class="shred shred2"></div>
+            <div class="shred shred3"></div>
+            <div class="shred shred4"></div>
+
+            <div class="opt-wrap opt-garlic"><div class="garlic"></div></div>
+            <div class="egg"></div>
+            <div class="opt-wrap opt-scallion">
+              <div class="scallion sc1"></div>
+              <div class="scallion sc2"></div>
+              <div class="scallion sc3"></div>
+              <div class="scallion sc4"></div>
+              <div class="scallion sc5"></div>
+              <div class="scallion sc6"></div>
+            </div>
+            <div class="opt-wrap opt-chili">
+              <div class="chili ch1"></div>
+              <div class="chili ch2"></div>
+              <div class="chili ch3"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pin calamansi"></div>
+        <div class="pin spoon">
+          <div class="spoon-handle"></div>
+          <div class="spoon-bowl"></div>
+        </div>
+
+        <div class="pin steam st1"></div>
+        <div class="pin steam st2"></div>
+        <div class="pin steam st3"></div>
+
+        <button class="hit-area" id="stirHit" aria-label="Stir the bowl"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="garnish-rail" role="group" aria-label="Add toppings">
+    <button class="chip-toggle" data-target="garlic" aria-pressed="false"><span class="icon"><span class="icon-garlic"></span></span>Fried garlic</button>
+    <button class="chip-toggle" data-target="scallion" aria-pressed="false"><span class="icon icon-scallion"></span>Scallion</button>
+    <button class="chip-toggle" data-target="egg" aria-pressed="false"><span class="icon icon-egg"></span>Boiled egg</button>
+    <button class="chip-toggle" data-target="calamansi" aria-pressed="false"><span class="icon icon-calamansi"></span>Calamansi</button>
+    <button class="chip-toggle" data-target="chili" aria-pressed="false"><span class="icon icon-chili"></span>Chili oil</button>
+  </div>
+
+  <div class="action-rail">
+    <button class="action-btn" id="stirBtn">Stir the pot</button>
+    <button class="action-btn" id="surpriseBtn">Surprise me</button>
+  </div>
+
+  <p class="status-line" id="statusLine">Plain and simple — sometimes that's exactly right.</p>
+
+  <p class="footnote">Pure CSS: box-shadow particle grains, container-query canvas scaling, cubic-bezier pop-ins. The only JavaScript in this piece toggles class names and this sentence.</p>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

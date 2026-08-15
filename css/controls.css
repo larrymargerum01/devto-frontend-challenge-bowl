@@ -1,0 +1,128 @@
+/* ---------------- garnish rail ---------------- */
+.garnish-rail{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap: 10px;
+  max-width: 480px;
+}
+.chip-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(55,42,28,0.22);
+  background: #FBF5E7;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.86rem;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background .2s ease, transform .15s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.chip-toggle:hover{ transform: translateY(-1px); border-color: rgba(55,42,28,0.4); }
+.chip-toggle:active{ transform: translateY(0); }
+.chip-toggle[aria-pressed="true"]{
+  background: var(--brown);
+  color: #F7EFE1;
+  border-color: var(--brown);
+  box-shadow: 0 4px 10px rgba(107,66,38,0.28);
+}
+.chip-toggle[aria-pressed="true"] .icon,
+.chip-toggle[aria-pressed="true"] .icon-garlic,
+.chip-toggle[aria-pressed="true"] .icon-scallion,
+.chip-toggle[aria-pressed="true"] .icon-egg,
+.chip-toggle[aria-pressed="true"] .icon-calamansi,
+.chip-toggle[aria-pressed="true"] .icon-chili{
+  filter: drop-shadow(0 0 1.5px rgba(255,255,255,0.55));
+}
+.chip-toggle:focus-visible{ outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* mini icons — small replicas of the actual bowl shapes, not generic dots */
+.icon{
+  width:16px; height:16px;
+  flex-shrink:0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+.icon-garlic{
+  width:3px; height:3px; border-radius:50%;
+  box-shadow: -4px -2px 0 1.8px #E8C77A, 3.5px -3px 0 1.5px #F1D68C, -0.5px 3.5px 0 1.7px #D9AE52;
+}
+.icon-scallion{
+  width:13px; height:10px; border-radius:50%;
+  background: radial-gradient(circle, transparent 30%, #63784C 33% 62%, transparent 65%);
+}
+.icon-egg{
+  width:14px; height:12px; border-radius:50%;
+  background: radial-gradient(circle at 40% 35%, #FFFDF6 0%, #F3E7CC 100%);
+  box-shadow: 0 1px 2px rgba(60,35,10,0.2);
+  position:relative;
+}
+.icon-egg::after{
+  content:"";
+  position:absolute; width:6px; height:6px; border-radius:50%;
+  left:50%; top:52%; transform: translate(-50%,-50%);
+  background: radial-gradient(circle at 35% 30%, #FBCB6B 0%, #C97E1D 100%);
+}
+.icon-calamansi{
+  width:13px; height:13px; border-radius:50%;
+  background: repeating-conic-gradient(from 6deg, #DCE494 0deg 12deg, #C7D278 12deg 24deg);
+  box-shadow: 0 0 0 2px #A7C05A;
+}
+.icon-chili{
+  width:15px; height:4px; border-radius:3px;
+  background: linear-gradient(90deg, #C6503A, #8F2E20);
+  transform: rotate(-10deg);
+}
+
+/* ---------------- action buttons ---------------- */
+.action-rail{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 10px;
+}
+.action-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height: 44px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--brown);
+  background: transparent;
+  color: var(--brown);
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease, transform .15s ease;
+}
+.action-btn:hover{ background: var(--brown); color: #F7EFE1; transform: translateY(-1px); }
+.action-btn:focus-visible{ outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* ---------------- status + footnote ---------------- */
+.status-line{
+  font-family:'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(0.95rem, 3vw, 1.05rem);
+  color: var(--brown);
+  text-align:center;
+  min-height: 1.4em;
+  transition: opacity .25s ease;
+}
+
+.footnote{
+  text-align:center;
+  font-size: 0.72rem;
+  color: rgba(55,42,28,0.5);
+  max-width: 460px;
+  line-height:1.6;
+  padding: 0 12px;
+}
