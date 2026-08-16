@@ -1,7 +1,5 @@
 # Build Your Bowl — CSS Art, Comfort Food Edition
 
-[![Preview](https://larrymargerum-devto-frontend-bowl.pages.dev)](https://larrymargerum-devto-frontend-bowl.pages.dev/)
-
 A pure CSS art project that visualizes a bowl of **arroz caldo** (Filipino chicken rice soup) with interactive toppings. Every visual element — from the broth's simmering glow to the steam rising from the bowl — is crafted with CSS. JavaScript plays only a supporting role, toggling class names to reveal ingredients.
 
 ---
